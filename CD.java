@@ -1,5 +1,5 @@
 public class CD extends Product {
-   protected String artist;
+  protected String artist;
   protected int numSong;
   protected String label;
 
@@ -26,18 +26,24 @@ public class CD extends Product {
   public void setLabel(String label) {
     this.label = label;
   }
-  
-    public CD(){
-      super();//mengakses constructor superclass
-      artist = "";
-      numSong = 0;
-      label = "";
-}
 
-public CD(int Number,String Name,int quantity,double price,String artist, int numSong, String label){
-  super(Number,Name,quantity,price);
-  this.artist = artist;
-  this.numSong = numSong;
-  this.label = label;
-}
+  public CD() {
+    super();// mengakses constructor superclass
+    artist = "";
+    numSong = 0;
+    label = "";
+  }
+
+  public CD(int Number, String Name, int quantity, double price, String artist, int numSong, String label) {
+    super(Number, Name, quantity, price);
+    this.artist = artist;
+    this.numSong = numSong;
+    this.label = label;
+  }
+
+  public void print() {
+    System.out.println("Artist" + artist);
+    System.out.println("Total Song" + numSong);
+    System.out.println("Label" + label);
+  }
 }

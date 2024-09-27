@@ -1,5 +1,4 @@
 
-
 public class DVD {
     protected int length;
     protected String rating;
@@ -28,21 +27,25 @@ public class DVD {
     public void setStudio(String studio) {
         this.studio = studio;
     }
-  
-    public DVD(){
-      super();//mengakses constructor superclass
-      length= 0;
-      rating =""; 
-      studio = "";
-}
 
-public DVD(int Number,String Name,int quantity,double price,String artist, int numSong, String label){
-  super();
-  this.length = length;
-  this.rating = rating;
-  this.studio = studio;
-}
-}
+    public DVD() {
+        super();// mengakses constructor superclass
+        length = 0;
+        rating = "";
+        studio = "";
+    }
 
-    
+    public DVD(int Number, String Name, int quantity, double price, int length, String rating, String studio) {
+        super();
+        this.length = length;
+        this.rating = rating;
+        this.studio = studio;
 
+    }
+
+    public void print() {
+        System.out.println("Length : " + length);
+        System.out.println("Rating :" + rating);
+        System.out.println("Studio :" + studio);
+    }
+}

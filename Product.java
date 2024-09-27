@@ -1,4 +1,4 @@
-public class Product{
+public class Product {
    protected int Number;
    protected String Name;
    protected int quantity;
@@ -36,19 +36,25 @@ public class Product{
       this.price = price;
    }
 
- public Product(){
-    Number = 0;
-    Name = "";
-    quantity = 0;
-    price = 0.0;
- }
+   public Product() {
+      Number = 0;
+      Name = "";
+      quantity = 0;
+      price = 0.0;
+   }
 
- public Product(int Number, String Name, int quantity, double price){
-this.Number = Number;
-this.Name = Name;
-this.quantity = quantity;
-this.price = price;
+   public Product(int Number, String Name, int quantity, double price) {
+      this.Number = Number;
+      this.Name = Name;
+      this.quantity = quantity;
+      this.price = price;
 
-}  
+   }
+
+   public void print() {
+      System.out.println("Number: " + Number);
+      System.out.println("Name :" + Name);
+      System.out.println("Quantity: " + quantity);
+      System.out.println("Price" + price);
+   }
 }
-
