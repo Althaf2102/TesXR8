@@ -1,37 +1,33 @@
 import java.util.Scanner;
-
-public class Tester {
+public class Tester extends student{
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Pilih 1. CD atau 2. DVD");
-        int pilihan = in.nextInt();
-        in.nextLine();
-        if(pilihan == 1){
-           System.out.println("Number :");
-           String name = in.nextLine();
-           String label = in.nextLine();
-           String artist = in.nextLine();
-           int number = in.nextInt();
-           int quantity = in.nextInt();
-           int numSong = in.nextInt();
-           double price = in.nextDouble();
-           System.out.println("Label :");
-            CD cd1 = new CD(number,name,quantity,price,artist,numSong,label);
-            cd1.print();
-        }else if(pilihan == 2){
-            System.out.println("Number :");
-            String Name = in.nextLine();
-            String rating = in.nextLine();
-            String studio = in.nextLine();
-            int Number = in.nextInt();
-            int quantity = in.nextInt();
-            int length = in.nextInt();
-            Double price = in.nextDouble();
-            System.out.println("Studio :");
-            DVD dvd1 = new DVD(Number, Name, quantity, price, length, rating, studio);
-            dvd1.print();
+        System.out.println("Student/Teacher");
+        String pilihan = in.nextLine();
+        if (pilihan == "Student") {
+            System.out.println("Status:");
+            String name = in.nextLine();
+            String major = in.nextLine();
+            int age = in.nextInt();
+            int Studentnumber = in.nextInt();
+            int score = in.nextInt();
+            System.out.println("Biodata:");
+            student std1 = new student(name,age,Studentnumber,score,major);
+            std1.print();
+        }else if (pilihan == "Teacher"){
+                  System.out.println("Status:");
+                  String name = in.nextLine();
+                  int age = in.nextInt();
+                  System.out.println("shift:");
+                  if(pilihan == "fulltime"){
+                    String unit = in.nextLine();
+                    int Anual_salary = in.nextInt();
+                  }else if(pilihan == "parttime"){
+                    String Hour_worked = in.nextLine();
+                  }
         }else{
-            System.out.println("Input Salah");
+            System.out.println("Input Salah!");
         }
     }
 }
+
